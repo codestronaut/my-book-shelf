@@ -1,0 +1,112 @@
+//
+//  BookModel.swift
+//  My Book Shelf
+//
+//  Created by Aditya on 20/11/22.
+//
+
+import Foundation
+import UIKit
+
+struct BookModel {
+  let id: Int;
+  let title: String;
+  let cover: UIImage;
+  let synopsis: String;
+  let category: String;
+  let writer: String;
+  let yearPublished: Int;
+}
+
+let dummyBooksData = [
+  BookModel(
+    id: 1,
+    title: "Atomic Habits: An Easy & Proven Way to Build Good Habits & Break Bad Ones",
+    cover: UIImage(named: "Book1")!,
+    synopsis: "If you're having trouble changing your habits, the problem isn't you. The problem is your system. Bad habits repeat themselves again and again not becuase you don't want to change, but because you have the wrong system for change. You do not ruse to the level of your goals. You fall to the level of your systems. Here, you'll get a proven system that can take you to the new heights. Atomic Habits will reshape the way you think about progress and success, and give you the tools and strategies you need to transform your habits. Whether you are a team looking to win a championship, an organization hoping to redefine an industry, or simply an individual who wishes to quit smoking, lose weight, reduce stress, or achieve any other goal.",
+    category: "Self-Help",
+    writer: "James Clear",
+    yearPublished: 2018
+  ),
+  BookModel(
+    id: 2,
+    title: "The Psychology of Money: Timeless lessons on wealth, greed, and happiness",
+    cover: UIImage(named: "Book2")!,
+    synopsis: "Money—investing, personal finance, and business decisions—is typically taught as a math-based field, where data and formulas tell us exactly what to do. But in the real world people don’t make financial decisions on a spreadsheet. They make them at the dinner table, or in a meeting room, where personal history, your own unique view of the world, ego, pride, marketing, and odd incentives are scrambled together. In The Psychology of Money, award-winning author Morgan Housel shares 19 short stories exploring the strange ways people think about money and teaches you how to make better sense of one of life’s most important topics.",
+    category: "Business & Money",
+    writer: "Morgan Housel",
+    yearPublished: 2020
+  ),
+  BookModel(
+    id: 3,
+    title: "Building a Second Brain: A Proven Method to Organize Your Digital Life and Unlock Your Creative Potential",
+    cover: UIImage(named: "Book3")!,
+    synopsis: "For the first time in history, we have instantaneous access to the world’s knowledge. There has never been a better time to learn, to contribute, and to improve ourselves. Yet, rather than feeling empowered, we are often left feeling overwhelmed by this constant influx of information. The very knowledge that was supposed to set us free has instead led to the paralyzing stress of believing we’ll never know or remember enough. Now, this eye-opening and accessible guide shows how you can easily create your own personal system for knowledge management, otherwise known as a Second Brain. As a trusted and organized digital repository of your most valued ideas, notes, and creative work synced across all your devices and platforms, a Second Brain gives you the confidence to tackle your most important projects and ambitious goals.",
+    category: "Creativity Self-Help",
+    writer: "Tiago Forte",
+    yearPublished: 2022
+  ),
+  BookModel(
+    id: 4,
+    title: "Designing Data-Intensive Applications: The Big Ideas Behind Reliable, Scalable, and Maintainable Systems",
+    cover: UIImage(named: "Book4")!,
+    synopsis: "Data is at the center of many challenges in system design today. Difficult issues need to be figured out, such as scalability, consistency, reliability, efficiency, and maintainability. In addition, we have an overwhelming variety of tools, including relational databases, NoSQL datastores, stream or batch processors, and message brokers. What are the right choices for your application? How do you make sense of all these buzzwords? In this practical and comprehensive guide, author Martin Kleppmann helps you navigate this diverse landscape by examining the pros and cons of various technologies for processing and storing data. Software keeps changing, but the fundamental principles remain the same. With this book, software engineers and architects will learn how to apply those ideas in practice, and how to make full use of data in modern applications.",
+    category: "Computer Science",
+    writer: "Martin Kleppmann",
+    yearPublished: 2017
+  ),
+  BookModel(
+    id: 5,
+    title: "Software Engineering at Google: Lessons Learned from Programming Over Time",
+    cover: UIImage(named: "Book5")!,
+    synopsis: "Today, software engineers need to know not only how to program effectively but also how to develop proper engineering practices to make their codebase sustainable and healthy. This book emphasizes this difference between programming and software engineering. How can software engineers manage a living codebase that evolves and responds to changing requirements and demands over the length of its life? Based on their experience at Google, software engineers Titus Winters and Hyrum Wright, along with technical writer Tom Manshreck, present a candid and insightful look at how some of the world’s leading practitioners construct and maintain software. This book covers Google’s unique engineering culture, processes, and tools and how these aspects contribute to the effectiveness of an engineering organization.",
+    category: "Computer Science",
+    writer: "Titus Winters",
+    yearPublished: 2020
+  ),
+  BookModel(
+    id: 6,
+    title: "Algorithms to Live By: The Computer Science of Human Decisions",
+    cover: UIImage(named: "Book6")!,
+    synopsis: "An exploration of how computer algorithms can be applied to our everyday lives to solve common decision-making problems and illuminate the workings of the human mind. What should we do, or leave undone, in a day or a lifetime? How much messiness should we accept? What balance of the new and familiar is the most fulfilling? These may seem like uniquely human quandaries, but they are not. Computers, like us, confront limited space and time, so computer scientists have been grappling with similar problems for decades. And the solutions they’ve found have much to teach us.",
+    category: "Computer Science",
+    writer: "Brian Christian",
+    yearPublished: 2016
+  ),
+  BookModel(
+    id: 7,
+    title: "Swift Apprentice - Beginning programming with Swift",
+    cover: UIImage(named: "Book7")!,
+    synopsis: "All the code in the book works inside of Xcode’s easy-to-use playgrounds. That means you can focus on core Swift language concepts, such as classes, protocols, and generics, instead of getting bogged down in the details of building apps. This is a companion book to the SwiftUI Apprentice; the SwiftUI Apprentice focuses on building apps, while Swift Apprentice focuses on the Swift language itself.",
+    category: "Programming",
+    writer: "Kodeco Tutorial Team",
+    yearPublished: 2021
+  ),
+  BookModel(
+    id: 8,
+    title: "UIKit Apprentice - Beginning iOS Development with Swift",
+    cover: UIImage(named: "Book8")!,
+    synopsis: "The UIKit Apprentice is a series of epic-length tutorials for beginners where you’ll learn how to build four complete apps from scratch. Each new app will be a little more advanced than the one before, and together they cover everything you need to know to make your own apps. By the end of the series you’ll be experienced enough to turn your ideas into real apps that you can sell on the App Store. These tutorials have easy to follow step-by-step instructions, and consist of more than 1,100 pages and 500 illustrations! You also get full source code, image files, and other resources you can re-use for your own projects. If you’re new to iOS and Swift, or to programming in general, learning how to write an app can seem incredibly overwhelming.",
+    category: "Programming",
+    writer: "Kodeco Tutorial Team",
+    yearPublished: 2021
+  ),
+  BookModel(
+    id: 9,
+    title: "Data Structures & Algorithms in Swift",
+    cover: UIImage(named: "Book9")!,
+    synopsis: "Understanding how data structures and algorithms work in code is crucial for creating efficient and scalable apps and acing job interviews. Swift’s standard library and, more recently, the Swift Collections and Algorithms packages contain a robust set of general-purpose collection types and algorithms, yet they don’t cover every case! By the end of this book, you’ll have hands-on experience solving common issues with data structures and algorithms — and you’ll be well on your way to developing your own efficient and useful implementations!",
+    category: "Programming",
+    writer: "Kodeco Tutorial Team",
+    yearPublished: 2021
+  ),
+  BookModel(
+    id: 10,
+    title: "Range: Why Generalists Triumph in a Specialized World",
+    cover: UIImage(named: "Book10")!,
+    synopsis: "Plenty of experts argue that anyone who wants to develop a skill, play an instrument, or lead their field should start early, focus intensely, and rack up as many hours of deliberate practice as possible. If you dabble or delay, you’ll never catch up to the people who got a head start. But a closer look at research on the world’s top performers, from professional athletes to Nobel laureates, shows that early specialization is the exception, not the rule. Provocative, rigorous, and engrossing, Range makes a compelling case for actively cultivating inefficiency. Failing a test is the best way to learn. Frequent quitters end up with the most fulfilling careers. The most impactful inventors cross domains rather than deepening their knowledge in a single area. As experts silo themselves further while computers master more of the skills once reserved for highly focused humans, people who think broadly and embrace diverse experiences and perspectives will increasingly thrive.",
+    category: "Self-Help",
+    writer: "David J. Epstein",
+    yearPublished: 2019
+  )
+]
